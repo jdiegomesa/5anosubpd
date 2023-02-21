@@ -1,0 +1,334 @@
+.UBPD5Anos-twocol{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 880px;
+  padding: 24px 0;
+  width: 1200px;
+  margin: 0 auto;
+  @include tablet{
+    min-height: 85vw;
+    padding: 2vw 0;
+    width: 90vw;
+  }
+  @include mobile{
+    width: 90vw;
+    flex-direction: column;
+  }
+  &-text{
+    width: 450px;
+    padding-right: 50px;
+    @include tablet{
+      width: 35vw;
+      padding-right: 5vw;
+    }
+    @include mobile{
+      width: 90vw;
+      order: 1;
+    }
+    & h3{
+      font-family: $serif;
+      font-weight: $bold;
+      color: $violeta;
+      line-height: 1.2;
+      font-size: var(--fuente3);
+      padding-top: var(--fuente1);
+      @include tablet{
+        font-size: var(--fuente2_tablet);
+        padding-top: var(--fuente1_tablet);
+      }
+      @include mobile{
+        font-size: var(--fuente1_mobile);
+        padding-top: var(--fuente1_mobile);
+      }
+    }
+    & p{
+      font-family: $sans;
+      font-weight: $light;
+      color: $negro;
+      line-height: 1.4;
+      font-size: var(--fuente1);
+      padding-top: var(--fuente1);
+      @include tablet{
+        font-size: var(--fuente2_tablet);
+        padding-top: var(--fuente1_tablet);
+      }
+      @include mobile{
+        font-size: var(--fuente1_mobile);
+        padding-top: var(--fuente1_mobile);
+      }
+      &.sub{
+        font-family: $serif;
+        font-style: italic;
+        font-weight: $medium;
+      }
+    }
+  }
+  &-quote{
+    width: 690px;
+    @include tablet{
+      width: 45vw;
+    }
+    @include mobile{
+      width: 90vw;
+      order: 0;
+    }
+    &-text{
+      font-family: $hand;
+      font-weight: $regular;
+      color: var(--color);
+      line-height: 1.2;
+      font-size: var(--fuente3);
+      padding-top: var(--fuente1);
+      padding-bottom: var(--fuente0);
+      @include tablet{
+        font-size: var(--fuente4_tablet);
+        padding-top: var(--fuente1_tablet);
+        padding-bottom: var(--fuente0_tablet);
+      }
+      @include mobile{
+        text-align: center;
+        font-size: var(--fuente2_mobile);
+        padding-top: var(--fuente1_mobile);
+        padding-bottom: var(--fuente0_mobile);
+      }
+    }
+    &-author{
+      &-name{
+        font-family: $sans;
+        font-weight: $bold;
+        color: var(--color);
+        font-size: var(--fuente1);
+        padding-top: var(--fuente0);
+        @include tablet{
+          font-size: var(--fuente1_tablet);
+          padding-top: var(--fuente0_tablet);
+        }
+        @include mobile{
+          text-align: center;
+          font-size: var(--fuente0_mobile);
+          padding-top: var(--fuente0_mobile);
+        }
+      }
+      &-subtext{
+        font-family: $sans;
+        font-weight: $light;
+        color: var(--color);
+        font-size: var(--fuente1);
+        padding-top: var(--fuente-1);
+        padding-bottom: var(--fuente1);
+        @include tablet{
+          font-size: var(--fuente1_tablet);
+          padding-top: var(--fuente-1_tablet);
+          padding-bottom: var(--fuente1_tablet);
+        }
+        @include mobile{
+          text-align: center;
+          font-size: var(--fuente0_mobile);
+          padding-bottom: var(--fuente1_mobile);
+          padding-top: var(--fuente-3_mobile);
+        }
+      }
+    }
+  }
+  &-docs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    @include tablet{
+      width: 90vw;
+    }
+    @include mobile{
+      order: 3;
+      flex-direction: column-reverse;
+      width: 90vw;
+    }
+    &-links{
+      width: 450px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include tablet{
+        width: 40vw;
+      }
+      @include mobile{
+        width: 90vw;
+      }
+      &-element{
+        position: relative;
+        &-image{
+          width: 200px;
+          border-radius: 50%;
+          @include tablet{
+            width: 18vw;
+          }
+          @include mobile{
+            width: 40vw;
+          }
+        }
+        &-icon{
+          position: absolute;
+          bottom: 10px;
+          right: -5px;
+          width: 70px;
+          @include tablet{
+            bottom: 0;
+            right: 0;
+            width: 5vw;
+          }
+          @include mobile{
+            bottom: 0;
+            right: 0;
+            width: 15vw;
+          }
+        }
+      }
+    }
+    &-info{
+      width: 500px;
+      @include tablet{
+        width: 45vw;
+      }
+      @include mobile{
+        width: 90vw;
+      }
+      &-title{
+        font-family: $sans;
+        font-weight: $bold;
+        color: var(--color);
+        line-height: 1.2;
+        font-size: var(--fuente2);
+        padding-top: var(--fuente1);
+        padding-bottom: var(--fuente1);
+        @include tablet{
+          font-size: var(--fuente2_tablet);
+          padding-top: var(--fuente1_tablet);
+          padding-bottom: var(--fuente1_tablet);
+        }
+        @include mobile{
+          font-size: var(--fuente1_mobile);
+          padding-top: var(--fuente1_mobile);
+          padding-bottom: var(--fuente0_mobile);
+        }
+      }
+      &-text{
+        font-family: $sans;
+        font-weight: $light;
+        color: $negro;
+        line-height: 1.2;
+        font-size: var(--fuente1);
+        @include tablet{
+          font-size: var(--fuente2_tablet);
+        }
+        @include mobile{
+          font-size: var(--fuente1_mobile);
+          padding-bottom: var(--fuente1_mobile);
+        }
+      }
+    }
+  }
+  &-book{
+    position: absolute;
+    right: 0;
+    top: 415px;
+    order: 2;
+    @include tablet{
+      top: 50vw;
+    }
+    @include mobile{
+      position: static;
+    }
+    & img{
+      width: 600px;
+      @include tablet{
+        width: 45vw;
+      }
+      @include mobile{
+        width: 90vw;
+      }
+    }
+  }
+  &-expand{
+    width: 1000px;
+    padding: 24px 0;
+    @include tablet{
+      width: 80vw;
+      padding: 2vw 0;
+    }
+    @include mobile{
+      width: 90vw;
+      padding: 2vw 0;
+      order: 3;
+    }
+    &-content{
+      transition-duration: 1s;
+      overflow: hidden;
+      max-height: 0;
+      & p, & li{
+        font-family: $sans;
+        font-weight: $light;
+        color: $negro;
+        line-height: 1.4;
+        font-size: var(--fuente1);
+        padding-top: var(--fuente1);
+        @include tablet{
+          font-size: var(--fuente2_tablet);
+          padding-top: var(--fuente1_tablet);
+        }
+        @include mobile{
+          font-size: var(--fuente1_mobile);
+          padding-top: var(--fuente1_mobile);
+        }
+      }
+      & ul{
+        padding-left: 24px;
+        @include tablet {
+          padding-left: 2vw;
+        }
+        @include mobile {
+          padding-left: 4vw;
+        }
+        & li{
+          list-style: inside;
+        }
+      }
+    }
+    &-button{
+      font-family: $sans;
+      font-weight: $medium;
+      color: $violeta;
+      background-color: transparent;
+      display: block;
+      transition-duration: .5s;
+      cursor: pointer;
+      margin: 24px auto 0;
+      border: solid $violeta 2px;
+      border-radius: 70px;
+      font-size: var(--fuente0);
+      padding: var(--fuente-2) var(--fuente2);
+      &:hover{
+        background-color: $violeta;
+        color: $blanco;
+      }
+      @include tablet{
+        font-size: var(--fuente0_tablet);
+        padding: var(--fuente-2_tablet) var(--fuente2_tablet);
+      }
+      @include mobile{
+        font-size: var(--fuente0_mobile);
+        padding: var(--fuente-2_mobile) var(--fuente2_mobile);
+      }
+    }
+    &.opened{
+      &>.UBPD5Anos-twocol-expand-content{
+        max-height: 1000vh;
+      }
+      &>.UBPD5Anos-twocol-expand-button{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@mixin desktop {
+    @media screen and (min-width: 1280px) {
+      @content
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 600px) and (max-width: 1200px) {
+      @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px) {
+      @content
+    }
+}
+
+@mixin text($font: $sans, $size: 0, $color: $negro, $weight: $regular){
+  color: $color;
+	box-sizing: border-box;
+  font-family: $font;
+  font-weight: $weight;
+  font-size: var(--fuente#{$size});
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  @include tablet{
+    max-width: 90vw;
+    font-size: var(--fuente#{$size}_tablet);
+  }
+  @include mobile{
+    max-width: 90vw;
+    font-size: var(--fuente#{$size}_mobile);
+  }
+  & a{
+    color: $color;
+    font-weight: $bold;
+    text-decoration: underline;
+    &:hover{
+      opacity: .8;
+    }
+    &:visited{
+      text-decoration: none;
+    }
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1;
+  &:focus{
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	width: 100vw;
+	overflow-x: hidden;
+  &.violeta{
+    background-color: $violetablanco;
+  }
+  &.verde{
+    background-color: $verdeblanco;
+  }
+  &.amarillo{
+    background-color: $amarilloblanco;
+  }
+  &.verde{
+    background-color: $verdeblanco;
+  }
+  &.azul{
+    background-color: $azulblanco;
+  }
+}
+a{
+	color: inherit;
+}
+
+.hidden{
+  display: none;
+}
+
+.UBPD5Anos-video{
+  width: 1000px;
+  height: 562px;
+  margin: 18px 0 36px calc(50vw - 600px);
+  @include tablet{
+    width: 80vw;
+    height: 45vw;
+    margin: 2vw 5vw;
+  }
+  @include mobile{
+    width: 100vw;
+    height: 56.2vw;
+    margin: 5vw 0 0;
+  }
+}

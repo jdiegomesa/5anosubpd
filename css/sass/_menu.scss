@@ -1,0 +1,129 @@
+.UBPD5Anos-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: url('https://ubpdbusquedadesaparecidos.co/wp-content/especiales/5anosubpd/assets/txtr-06.png') repeat;
+  background-size: 75%;
+  width: 1200px;
+  padding: 48px calc(50vw - 600px);
+  @include tablet{
+    width: 90vw;
+    padding: 5vw;
+  }
+  @include mobile{
+    width: 90vw;
+    padding: 7vw 5vw;
+    flex-direction: column;
+  }
+  &-title{
+    font-family: $sans;
+    color: $blanco;
+    font-weight: $black;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: .85;
+    line-height: 1.2;
+    letter-spacing: 10px;
+    font-size: 125px;
+    width: 400px;
+    @include desktop{
+      &-mobile{
+        display: none;
+      }
+    }
+    @include tablet{
+      letter-spacing: .7vw;
+      font-size: 9vw;
+      width: 30vw;
+      &-mobile{
+        display: none;
+      }
+    }
+    @include mobile{
+      line-height: 1.1;
+      letter-spacing: 1.2vw;
+      font-size: 16vw;
+      width: 95vw;
+      &-desktop{
+        display: none;
+      }
+    }
+  }
+  &-navigation{
+    width: 730px;
+    @include tablet{
+      width: 58vw;
+    }
+    @include mobile{
+      width: 90vw;
+    }
+    &-caption{
+      font-family: $serif;
+      color: $violeta;
+      font-weight: $regular;
+      text-align: right;
+      line-height: 1.2;
+      font-size: var(--fuente3);
+      padding-bottom: 24px;
+      @include tablet{
+        font-size: var(--fuente3_tablet);
+        padding-bottom: 2vw;
+      }
+      @include mobile{
+        width: 78vw;
+        font-size: var(--fuente2_mobile);
+        padding: 6vw 0 8vw 12vw;
+      }
+    }
+    &-grid{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &-element{
+        transition-duration: .5s;
+        width: 350px;
+        margin-bottom: 16px;
+        @include tablet{
+          width: 28vw;
+          margin-bottom: 1.3vw;
+        }
+        @include mobile{
+          width: 43vw;
+          margin-bottom: 3vw;
+        }
+        &:hover{
+          filter: grayscale(1);
+        }
+        & img{
+          width: 100%;
+        }
+        & p{
+          width: 100%;
+          text-align: center;
+          font-family: $sans;
+          color: $blanco;
+          text-transform: uppercase;
+          font-weight: $bold;
+          letter-spacing: 2px;
+          line-height: 1.2;
+          font-size: var(--fuente0);
+          padding: 6px 0;
+          @include tablet{
+            font-size: var(--fuente0_tablet);
+            padding: .5vw 0;
+          }
+          @include mobile{
+            font-size: var(--fuente-2_mobile);
+            padding: .5vw 0;
+            letter-spacing: .2vw;
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+  }
+  
+}

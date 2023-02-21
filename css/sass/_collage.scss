@@ -1,0 +1,235 @@
+.UBPD5Anos-collage{
+  background: $blanco url('https://ubpdbusquedadesaparecidos.co/wp-content/especiales/5anosubpd/assets/txtr-01.png') no-repeat;
+  background-size: cover;
+  width: 1200px;
+  padding: 24px calc(50vw - 600px);
+  @include mobile{
+    background-repeat: repeat-y;
+    background-size: 261vw;
+    background-position-x: -15vw;
+    width: 90vw;
+    padding: 10vw 5vw;
+  }
+  &-title{
+    font-family: $serif;
+    color: $violeta;
+    font-weight: $medium;
+    text-align: center;
+    line-height: 1.2;
+    font-size: var(--fuente4);
+    padding: 24px 0;
+    @include tablet{
+      font-size: var(--fuente3_tablet);
+      padding: 2vw 0;
+    }
+    @include mobile{
+      width: 78vw;
+      font-size: var(--fuente2_mobile);
+      padding: 0 0 6vw;
+      margin: 0 auto;
+    }
+  }
+  &-text{
+    text-align: center;
+    font-family: $sans;
+    font-weight: $regular;
+    color: $negro;
+    line-height: 1.4;
+    font-size: var(--fuente1);
+    padding: var(--fuente1) 0 var(--fuente3);
+    width: 750px;
+    margin: 0 auto;
+    @include tablet{
+      font-size: var(--fuente2_tablet);
+      padding: var(--fuente1_tablet) 0;
+    }
+    @include mobile{
+      width: 80vw;
+      font-weight: $light;
+      font-size: var(--fuente1_mobile);
+      padding: var(--fuente0_mobile) 0;
+    }
+  }
+  &-images{
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    @include mobile{
+      width: 90vw;
+      height: 220vw;
+    }
+    &-element{
+      position: absolute;
+      cursor: pointer;
+      background-color: $blanco;
+      transition: .5s;
+      padding: 15px 15px 50px 15px;
+      box-shadow: -4px 1px 5px 0px $aguamarina_transparente;
+      @include mobile{
+        padding: 3vw 3vw 8vw 3vw;
+        box-shadow: -1vw .3vw 1vw 0px $aguamarina_transparente;
+      }
+      &>img{
+        width: 200px;
+        @include mobile{
+          width: 35vw;
+        }
+      }
+      &>p{
+        display: none;
+      }
+      &:nth-of-type(1){
+        transform: rotate(-7deg);
+        top: 24px;
+        left: 0;
+        @include mobile{
+          transform: rotate(-4deg);
+          top: 2vw;
+          left: 2vw;
+        }
+      }
+      &:nth-of-type(2){
+        top: 24px;
+        left:278px;
+        @include mobile{
+          top: 4vw;
+          left: 49vw;
+        }
+      }
+      &:nth-of-type(3){
+        top: 0;
+        left: 628px;
+        @include mobile{
+          transform: rotate(8deg);
+          top: 32vw;
+          left: 29vw;
+        }
+      }
+      &:nth-of-type(4){
+        transform: rotate(-5deg);
+        top: 241px;
+        left: 741px;
+        @include mobile{
+          transform: rotate(-4deg);
+          top: 63vw;
+          left: 2vw;
+        }
+      }
+      &:nth-of-type(5){
+        transform: rotate(15deg);
+        top: 67px;
+        left: 940px;
+        @include mobile{
+          transform: none;
+          top: 74vw;
+          left: 46vw;
+        }
+      }
+      &:nth-of-type(6){
+        transform: rotate(6deg);
+        top: 184px;
+        left: 163px;
+        @include mobile{
+          transform: rotate(7deg);
+          top: 117vw;
+          left: 2vw;
+        }
+      }
+      &:nth-of-type(7){
+        transform: rotate(6deg);
+        top: 360px;
+        left: 544px;
+        @include mobile{
+          transform: rotate(4deg);
+          top: 149vw;
+          left: 30vw;
+        }
+      }
+      &:nth-of-type(8){
+        transform: rotate(-5deg);
+        top: 376px;
+        left: 66px;
+        @include mobile{
+          transform: rotate(-7deg);
+          top: 110vw;
+          left: 43vw;
+        }
+      }
+      &:nth-of-type(9){
+        top: 450px;
+        left: 350px;
+        @include mobile{
+          transform: none;
+          top: 178vw;
+          left: 3vw;
+        }
+      }
+      &:nth-of-type(10){
+        transform: rotate(-15deg);
+        top: 398px;
+        left: 883px;
+        @include mobile{
+          transform: rotate(-7deg);
+          top: 180vw;
+          left: 52vw;
+        }
+      }
+      &:hover{
+        transform: scale(1.15);
+      }
+    }
+  }
+  &-modal{
+    background-color: $blanco;
+    margin: 0 auto;
+    width: 800px;
+    padding: 15px;
+    @include tablet{
+      width: 70vw;
+      padding: 1.2vw;
+    }
+    @include mobile{
+      width: 90vw;
+      padding: 3vw;
+    }
+    &-container{
+      background-color: #000000c9;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 15;
+      display: none;
+      &.opened{
+        display: flex;
+      }
+    }
+    &-image{
+      width: 100%;
+    }
+    &-text{
+      text-align: center;
+      font-family: $hand;
+      font-weight: $regular;
+      color: $negro;
+      line-height: 1.2;
+      margin: 0 auto;
+      font-size: var(--fuente2);
+      padding: var(--fuente-3) 0;
+      width: 780px;
+      @include tablet{
+        font-size: var(--fuente3_tablet);
+        padding: var(--fuente-3_tablet) 0;
+        width: 65vw;
+      }
+      @include mobile{
+        width: 87vw;
+        font-size: var(--fuente1_mobile);
+        padding: var(--fuente0_mobile) 0;
+      }
+    }
+  }
+}

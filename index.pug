@@ -1,0 +1,46 @@
+-var title = '5 años UBPD'
+-var active = 0
+-var url = 'https://ubpdbusquedadesaparecidos.co/especiales/balance-polifonico-ubpd/'
+
+-var items = [{"title":"5 años UBPD","id":"0","url":"","bgdesktop":"url('../assets/img/5AnosHomeFnd.png')","bgmobile":"url('../assets/img/M5AnosHomeFnd.png')","image":"./assets/img/5AnosHomeCllg.png","clase":"violeta","color":"#6f42a2", "frase": "Esta es una institución que vuelve realidad una esperanza y concreta la aspiración de una lucha histórica digna, resistente y persistente por la memoria y por la verdad","autorfrase": "Luz Marina Monzón","cargofrase": "Directora UBPD. Diciembre 2022."},{"title":"Participación","id":"1","url":"participacion/","bgdesktop":"url('../assets/img/5AnosPartFnd.png')","bgmobile":"url('../assets/img/M5AnosParticipacionFnd.png')","image":"./assets/img/5AnosPartCllg.png","clase":"verde","color":"#96b33a"},{"title":"Carater humanitario y extrajudicial","id":"2","url":"humanitario/","bgdesktop":"url('../assets/img/5AnosHumFnd.png')","bgmobile":"url('../assets/img/M5AnosHumanitarioFnd.png')","image":"./assets/img/5AnosHumCllg.png","clase":"amarillo","color":"#f4b400"},{"title":"La metodología de búsqueda","subtitle":"El Plan Nacional de Búsqueda y los Planes Regionales","id":"3","url":"metodologia/","bgdesktop":"url('../assets/img/5AnosMetodFnd.png')","bgmobile":"url('../assets/img/M5AnosMtodFnd.png')","image":"./assets/img/5AnosMetodCllg.png","clase":"naranja","color":"#ff7b22"},{"title":"Coordinación interinstitucional","id":"4","url":"coordinacion/","bgdesktop":"url('../assets/img/5AnosCoordFnd.png')","bgmobile":"url('../assets/img/M5AnosCoordinacionFnd.png')","image":"./assets/img/5AnosCoordCllg.png","clase":"azul","color":"#006ffb"}]
+-var color = '#6f42a2'
+-var clase = 'violeta'
+
+-var books = false
+
+doctype html
+html
+  include ./components/_head.pug
+  body(class=items[active].clase, style=`--color: ${items[active].color}`)
+    include ./components/_nav.pug
+    include ./components/_portada.pug
+    section.UBPD5Anos-twocol
+      .UBPD5Anos-twocol-text
+        p 1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate accusantium consequatur error quam odio doloribus dolorem labore, beatae accusamus nesciunt ipsa corrupti velit repudiandae, dolores rem reiciendis sapiente eos ad!
+      .UBPD5Anos-twocol-quote 
+        p.UBPD5Anos-twocol-quote-text "#{items[active].frase}"
+        .UBPD5Anos-twocol-quote-author
+          p.UBPD5Anos-twocol-quote-author-name= items[active].autorfrase
+          p.UBPD5Anos-twocol-quote-author-subtext= items[active].cargofrase
+      .UBPD5Anos-twocol-text
+        p 2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate accusantium consequatur error quam odio doloribus dolorem labore, beatae accusamus nesciunt ipsa corrupti velit repudiandae, dolores rem reiciendis sapiente eos ad!
+      .UBPD5Anos-twocol-text
+        p 3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate accusantium consequatur error quam odio doloribus dolorem labore, beatae accusamus nesciunt ipsa corrupti velit repudiandae, dolores rem reiciendis sapiente eos ad!
+      .UBPD5Anos-twocol-expand#UBPD5Anos-carta
+        .UBPD5Anos-twocol-expand-content
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laborum est maxime laboriosam iste, sed iure veniam rerum et aliquam ea excepturi repellat vel quos possimus provident, nobis totam quibusdam.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laborum est maxime laboriosam iste, sed iure veniam rerum et aliquam ea excepturi repellat vel quos possimus provident, nobis totam quibusdam.
+        button.UBPD5Anos-twocol-expand-button(onclick="UBPDopen('UBPD5Anos-carta');") Leer más
+      if books
+        a.UBPD5Anos-twocol-book(href="#")
+          img(src="./assets/img/LibroParticipacion.png", alt="Descárgalo completo")
+        
+    iframe.UBPD5Anos-video(src="https://www.youtube.com/embed/_pyDjg6kn1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen)
+    include ./components/_menu.pug
+    section.UBPD5Anos-podcast
+      iframe.UBPD5Anos-podcast-spotify(style="border-radius:12px" src="https://open.spotify.com/embed/track/1uXPu4aSDFPLzyNcH6ASD4?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy")
+      //- iframe.UBPD5Anos-podcast-soundcloud(scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1399433374&color=%236f42a2&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")
+      .UBPD5Anos-podcast-text 
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae libero, itaque ex consequatur ut totam officiis temporibus eveniet atque repudiandae amet explicabo minima excepturi! Iste dolores maxime iure rerum.
+    include ./components/_footer.pug
+    

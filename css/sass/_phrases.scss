@@ -1,0 +1,100 @@
+.UBPD5Anos-phrases{
+    background: var(--color) var(--bg) repeat;
+    background-size: 75%;
+    width: 1200px;
+    padding: 40px calc(50vw - 600px);
+    @include tablet{
+        width: 80vw;
+        padding: 4vw 10vw;
+    }
+    @include mobile{
+        width: 90vw;
+        background-size: 250%;
+        padding: 15vw 5vw;
+    }
+    &-slider{
+        width: 1200px;
+        overflow-x: hidden;
+        @include tablet{
+            width: 80vw;
+        }
+        @include mobile{
+            width: 90vw;
+        }
+    }
+    &-container{
+        display: flex;
+        flex-wrap: nowrap;
+        width: max-content;
+        align-items: center;
+        transition-duration: 1s;
+    }
+    &-element{
+        margin: 0 auto;
+        width: 1200px;
+        @include tablet{
+            width: 80vw;
+        }
+        @include mobile{
+            width: 90vw;
+        }
+        &-text{
+            font-family: $hand;
+            font-weight: $regular;
+            color: var(--color);
+            line-height: 1.2;
+            font-size: var(--fuente4);
+            padding-top: var(--fuente1);
+            padding-bottom: var(--fuente0);
+            @include tablet{
+              font-size: var(--fuente5_tablet);
+              padding-top: var(--fuente1_tablet);
+              padding-bottom: var(--fuente0_tablet);
+            }
+            @include mobile{
+              text-align: center;
+              font-size: var(--fuente4_mobile);
+              padding-top: var(--fuente1_mobile);
+              padding-bottom: var(--fuente0_mobile);
+            }
+        }   
+        &-author{
+            text-align: right;
+            font-family: $sans;
+            font-weight: $bold;
+            color: var(--color);
+            font-size: var(--fuente2);
+            padding-top: var(--fuente0);
+            @include tablet{
+                font-size: var(--fuente1_tablet);
+                padding-top: var(--fuente0_tablet);
+            }
+            @include mobile{
+                text-align: center;
+                font-size: var(--fuente1_mobile);
+                padding-top: var(--fuente0_mobile);
+            }
+        }
+        &-subtext{
+            text-align: right;
+            font-family: $sans;
+            font-weight: $light;
+            color: var(--color);
+            font-size: var(--fuente2);
+            padding-top: var(--fuente-1);
+            padding-bottom: var(--fuente1);
+            @include tablet{
+                font-size: var(--fuente1_tablet);
+                padding-top: var(--fuente-1_tablet);
+                padding-bottom: var(--fuente1_tablet);
+            }
+            @include mobile{
+                text-align: center;
+                font-size: var(--fuente1_mobile);
+                padding-bottom: var(--fuente1_mobile);
+                padding-top: var(--fuente-3_mobile);
+            }
+        }
+    }
+}
+

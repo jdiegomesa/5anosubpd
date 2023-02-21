@@ -1,0 +1,9 @@
+section.UBPD5Anos-portada(style=`--imgdesktop: ${items[active].bgdesktop}; --imgmobile: ${items[active].bgmobile};`)
+  if active == 0
+    h1.UBPD5Anos-portada-bigtitle <span>5</span> Años UBPD
+    h2.UBPD5Anos-portada-bigsubtitle Un balance polifónico
+  else 
+    h1.UBPD5Anos-portada-title= items[active].title
+    if items[active].subtitle
+      h2.UBPD5Anos-portada-subtitle= items[active].subtitle
+  img.UBPD5Anos-portada-img(src=`${items[active].image}`)

@@ -1,0 +1,10 @@
+section.UBPD5Anos-phrases(style=`--bg: ${phrasesBG}`)
+    .UBPD5Anos-phrases-slider
+        .UBPD5Anos-phrases-container#UBPD5Anos-phrases-container(data-position="1")
+            each slide in items[active].frases
+                //- Slide
+                .UBPD5Anos-phrases-element
+                    p.UBPD5Anos-phrases-element-text= slide.frase 
+                    p.UBPD5Anos-phrases-element-author= slide.autor
+                    if slide.cargo
+                        p.UBPD5Anos-phrases-element-subtext= slide.cargo

@@ -1,0 +1,13 @@
+section.UBPD5Anos-collage 
+  h2.UBPD5Anos-collage-title= collageTitle
+  if collageText
+    p.UBPD5Anos-collage-text= collageText
+  .UBPD5Anos-collage-images
+    each element in images
+      .UBPD5Anos-collage-images-element(onclick="UBPDopenimage(this, 'UBPD5Anos-collage-modal');")
+        img(src=element.url, alt="")
+        p= element.text
+  article.UBPD5Anos-collage-modal-container#UBPD5Anos-collage-modal(onclick="UBPDvalidateTarget(UBPDopen, 'UBPD5Anos-collage-modal');")
+    .UBPD5Anos-collage-modal
+      img.UBPD5Anos-collage-modal-image(src="")
+      p.UBPD5Anos-collage-modal-text 

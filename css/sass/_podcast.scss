@@ -1,0 +1,78 @@
+.UBPD5Anos-podcast{
+  background-color: var(--color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 24px auto 0;
+  padding: 60px calc(50vw - 600px);
+  @include tablet{
+    width: 90vw;
+    padding: 5vw;
+    margin: 2vw 0 0;
+  }
+  @include mobile{
+    flex-direction: column-reverse;
+    width: 90vw;
+    padding: 5vw;
+    margin: 5vw 0 0;
+  }
+  &-spotify{
+    width: 500px;
+    height: 235px;
+    @include tablet{
+      width: 40vw;
+      height: 15vw;
+    }
+    @include mobile{
+      width: 90vw;
+      height: 56vw;
+    }
+  }
+  &-soundcloud{
+    width: 500px;
+    height: 170px;
+    @include tablet{
+      width: 38vw;
+      height: 13vw;
+    }
+    @include mobile{
+      width: 90vw;
+      height: 42vw;
+    }
+  }
+  &-text{
+    width: 470px;
+    padding-left: 80px;
+    border-left: solid $blanco 1px;
+    @include tablet{
+      width: 40vw;
+      padding-left: 5vw;
+      border-left-width: .1vw;
+    }
+    @include mobile{
+      width: 85vw;
+      padding-left: 5vw;
+      border-left-width: .2vw;
+      margin-bottom: 5vw;
+    }
+    & p{
+      font-family: $sans;
+      font-weight: $light;
+      color: $blanco;
+      line-height: 1.2;
+      font-size: var(--fuente1);
+      padding: var(--fuente0) 0;
+      @include tablet{
+        font-size: var(--fuente2_tablet);
+        padding: var(--fuente1_tablet) 0;
+      }
+      @include mobile{
+        font-size: var(--fuente0_mobile);
+        padding: var(--fuente0_mobile) 0;
+      }
+    }
+  }
+
+}
